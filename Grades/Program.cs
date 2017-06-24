@@ -13,11 +13,14 @@ namespace Grades
 
 
             GradeBook book = new GradeBook();
+            book.Name = "Brian's GradeBook";
+            book.Name = "Brian's Grade Book";
             book.AddGrade(91);
             book.AddGrade(89.5f);
             book.AddGrade(75);
 
             GradeStatistics stats = book.ComputeStatistics();
+            Console.WriteLine(book.Name);
             WriteResult("Average", stats.AverageGrade);
             WriteResult("Highest", (int)stats.HighestGrade);
             WriteResult("Lowest", stats.LowestGrade);
