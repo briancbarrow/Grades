@@ -12,6 +12,17 @@ namespace Grades.Tests
     public class GradeBookTests
     {
         [TestMethod]
+        public void ComputesLetterGrade()
+        {
+            GradeBook book = new GradeBook();
+            book.AddGrade(80);
+            book.AddGrade(90);
+
+            GradeStatistics result = book.ComputeStatistics();
+            Assert.AreEqual("B", result.LetterGrade);
+        }
+
+        [TestMethod]
         public void ComputesHighestGrade()
         {
             GradeBook book = new GradeBook();
