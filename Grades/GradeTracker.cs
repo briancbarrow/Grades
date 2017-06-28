@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace Grades
         public abstract void AddGrade(float grade);
         public abstract GradeStatistics ComputeStatistics();
         public abstract void WriteGrades(TextWriter destination);
+        public abstract IEnumerator GetEnumerator();
 
         public string Name
         {

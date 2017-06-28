@@ -1,8 +1,9 @@
-﻿using System.IO;
+﻿using System.Collections;
+using System.IO;
 
 namespace Grades
 {
-    internal interface IGradeTracker
+    internal interface IGradeTracker : IEnumerable
     {
         void AddGrade(float grade);
         GradeStatistics ComputeStatistics();
